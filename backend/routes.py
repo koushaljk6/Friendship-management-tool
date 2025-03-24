@@ -2,6 +2,13 @@ from app import app, db
 from flask import request, jsonify
 from models import Friend
 
+#make sure to run these 2 commends in backend folder before trying to run application otherwise flas variables will not be set
+#set FLASK_APP=app.py
+#set FLASK_ENV=development
+
+#this will automatically reload application in real time whenever u make changes in code
+#flask run --reload   
+
 #Get all friends
 @app.route("/api/friends",methods=["GET"])
 def get_friends():
